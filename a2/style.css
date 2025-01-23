@@ -1,10 +1,13 @@
 /* PlaceHolder */
 
-/* Chessboard styling - Set 2 (Darker Color Squares) - By Berry */
-.chessboard .dark-square {
-    background-color: #4a4a4a;
-    width: 12.5%;
-    padding-bottom: 12.5%;
+/* Chessboard styling - Set 2 (Darker Color Squares) - By Berry */ /* Edited to ensure formatting for the board with horizontal rows */
+.chessboard {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    width: 600px; 
+    height: 600px
   }
 
 /* Center the chessboard vertically - Set 2 - By Berry */ /* Edited to center the chessboard as a whole - By Ethan */
@@ -13,6 +16,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
     margin: 0;
   }
 
