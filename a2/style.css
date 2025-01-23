@@ -47,6 +47,7 @@ footer {
 /* Row positioning - By Ethan */
 .row {
     display: flex;
+    width: 100%;
 }
 
 /* Lighter hex coloring and size - By Ethan */
@@ -55,7 +56,7 @@ footer {
     width: 12.5%;
     height: 60px;
     background-color: white;
-    float:left;
+
 }
 
 /* Added for testing, feel free to edit/change but 12.5% width should be correct */
@@ -64,5 +65,5 @@ footer {
  width: 12.5%;
  height: 60px;
  background-color:#787878;
- float:left;
+
 }
