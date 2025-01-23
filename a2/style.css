@@ -48,6 +48,21 @@ footer {
     margin: 0 auto;
   }
 
+  /* Testing screen size - By Berry*/
+  @media (max-width: 60px){
+    .chessboard{
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  /* Chess Piece Integration - By Berry */
+  .white img, .black img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
 /* Row positioning - By Ethan */
 .row {
     display: flex;
