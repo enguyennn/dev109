@@ -45,15 +45,16 @@ footer {
   }
 
 /* Row positioning - By Ethan */
-.row {
-    display: flex;
-    justify-content: space-between; 
+.row{
+    position:relative;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 /* Lighter hex coloring and size - By Ethan */
 .white{
     border: 1px solid black;
-    width: 12.5%;
+    width: 10%;
     height: 60px;
     background-color: white;
     float:left;
@@ -62,7 +63,7 @@ footer {
 /* Added for testing, feel free to edit/change but 12.5% width should be correct */
 .black{
  border: 1px solid black;
- width: 12.5%;
+ width: 10%;
  height: 60px;
  background-color:#787878;
  float:left;
