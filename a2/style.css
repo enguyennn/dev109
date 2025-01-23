@@ -47,7 +47,6 @@ footer {
 /* Row positioning - By Ethan */
 .row {
     display: flex;
-    justify-content: space-between; 
 }
 
 /* Lighter hex coloring and size - By Ethan */
