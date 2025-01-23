@@ -9,11 +9,12 @@
 
 /* Center the chessboard vertically - Set 2 - By Berry */ /* Edited to center the chessboard as a whole - By Ethan */
 #container {
-    margin-top:20%;
-    margin-left:10%;
-    margin-right:10%;
-    margin-bottom:5%;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
 /* Page background styling - Set 2 - By Berry */
 body {
