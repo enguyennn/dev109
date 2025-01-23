@@ -52,10 +52,11 @@ footer {
     margin-right:10%;
 }
 
+/* Lighter hex coloring and size - By Ethan */
 .white{
     border: 1px solid black;
     width: 10%;
     height: 60px;
-    background-color:white;
+    background-color: #FAF9F6;
     float:left;
 }
