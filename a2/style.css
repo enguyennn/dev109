@@ -44,3 +44,10 @@ footer {
     display: block;
     margin: 0 auto;
   }
+
+/* Row positioning - By Ethan */
+.row {
+    position:relative;
+    margin-left:10%;
+    margin-right:10%;
+}
