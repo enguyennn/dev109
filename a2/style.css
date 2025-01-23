@@ -46,7 +46,7 @@ footer {
 
 /* Row positioning - By Ethan */
 .row {
-    display: flex
+    display: flex;
     justify-content: space-between; 
 }
 
