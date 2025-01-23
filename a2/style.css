@@ -3,11 +3,10 @@
 /* Chessboard styling - Set 2 (Darker Color Squares) - By Berry */ /* Edited to ensure formatting for the board with horizontal rows */
 .chessboard {
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    width: 600px; 
-    height: 600px
+    flex-wrap: wrap;
+    width: 480px; 
+    height: 480px; 
+    margin: 0 auto;
   }
 
 /* Center the chessboard vertically - Set 2 - By Berry */ /* Edited to center the chessboard as a whole - By Ethan */
@@ -59,16 +58,14 @@ footer {
 .white{
     border: 1px solid black;
     width: 12.5%;
-    padding-bottom: 12.5%;
+    height: 60px;
     background-color: white;
-
 }
 
 /* Added for testing, feel free to edit/change but 12.5% width should be correct */
 .black{
- border: 1px solid black;
- width: 12.5%;
- padding-bottom: 12.5%;
- background-color:#787878;
-
+   border: 1px solid black;
+   width: 12.5%;
+   height: 60px;
+   background-color:#787878;
 }
