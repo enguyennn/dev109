@@ -6,7 +6,7 @@ body {
 h1 {
   text-align:center;
   color:blue;
-  font-family:"Dancing Script";
+  font-family:"DancingScriptRegular";
   font-size:400%;
 }
 
@@ -20,7 +20,7 @@ i, a, a:hover, a:visited {
 }
 
 p {
-  font-family: 'Dancing Script';
+  font-family: 'DancingScriptRegular';
   font-weight: normal;
   font-style: normal;
   font-size: 200%
