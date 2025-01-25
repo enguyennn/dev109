@@ -81,10 +81,27 @@ footer {
     background-color: white;
 }
 
-/* Added for testing, feel free to edit/change but 12.5% width should be correct */
+/* Added for testing, feel free to edit/change but 12.5% width should be correct - By Ethan*/
 .black{
    border: 1px solid black;
    width: 12.5%;
    height: 60px;
    background-color:#787878;
+}
+
+/* Header that matches the footer color - By Ethan */
+#title {
+   position:fixed;
+   top: 0px;
+   left: 0px; 
+   padding: 10px;
+   margin: 0px;
+   width:100%;
+   background-color: #333333;
+   text-align: center; 
+   z-index: 10;
+   font-family: 'JustLettersMedium'; 
+   font-weight: normal; 
+   font-style: normal; 
+   font-size: 60px;
 }
