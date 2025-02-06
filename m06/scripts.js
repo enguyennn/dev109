@@ -1,7 +1,11 @@
-var table = 3;             // Unit of table
+var table = parseInt(prompt("Enter the unit of the table"));             // Unit of table
+if (table == NaN || table == null){
+  table = 0;
+}
+
 var operator = 'addition'; // Type of calculation
 var i = 1;                 // Set counter to 1
-var msg = '';              // Message
+var msg = "<h2>Multiplication Table</h2>";              // Message
 
 if (operator === 'addition') {
   // Do addition
