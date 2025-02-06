@@ -1,4 +1,4 @@
-var table = parseInt(prompt("Enter the unit of the table"));             // Unit of table
+var table = parseInt(prompt("Enter the unit of the table: "));             // Unit of table
 if (table == NaN || table == null){
   table = 0;
 }
