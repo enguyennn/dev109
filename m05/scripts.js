@@ -1,20 +1,17 @@
-var table = parseInt(prompt("Enter the unit of the table: "));             // Unit of table
-if (table == NaN || table == null){
+var table = parseInt(prompt("Enter the unit of the table: ")); // Recieves the unit of table from the user
+if (table == NaN || table == null){ //Setting to the default value of 0 if the input is invalid
   table = 0;
 }
 
 var operator = 'multiplication'; // Type of calculation
-var i = 1;                 // Set counter to 1
-var msg = "<h2>Multiplication Table</h2>";              // Message
+var msg = "<h2>Multiplication Table</h2>"; // Message heading
 
-if (operator == 'multiplication') {
-  // Do multiplication
-  while (i < 11) {
-    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
-    i++;
-  }
+// Do multiplication ten times
+for (i = 1; i <11; i++) {
+  msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+  i++;
 }
 
-// Write the message into the page
+// Write the entire times table into the page
 var el = document.getElementById('blackboard');
 el.innerHTML = msg;
