@@ -92,7 +92,7 @@ li {
 
 }
 
-#form {
+form {
   width: 100%;
   margin: 1%;
   background-color: OldLace;
@@ -101,5 +101,7 @@ li {
   text-align: center;
   padding: 1em
 }
+
+
 
 
