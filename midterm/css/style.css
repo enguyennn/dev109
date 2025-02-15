@@ -69,12 +69,21 @@ li {
 }  
 
 #artifact1, #artifact2, #artifact3, #artifact4, #artifact5 {
-width: 18%;
-float: left;
-margin: 1%;
-background-color: OldLace;
-height: 20em;
-margin-bottom: 1em;
+  width: 17%;
+  float: left;
+  margin: 1%;
+  background-color: OldLace;
+  height: 20em;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 0 0.1em 0.01em;
+
 }
-  
+
+.icon {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 5% auto;
 }
+
