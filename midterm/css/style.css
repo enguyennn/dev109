@@ -1,70 +1,69 @@
 * {
-    font-family: Arial, Verdana, sans-serif;
-    color: #665544;
-    text-align: center;
-  }
-  
-  h1 {
-    font-family: 'MontserratRegular';
-    font-weight: normal;
-    font-style: normal;
-    color: white
-  }
-  
-  body {
-    width: 90%;
-    margin: 0 auto;
-    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-  }
-  
-  #content {
-    overflow: auto;
-  }
-              
-  #nav, #feature, #footer {
-    margin: 1%;
-  }
-  
-  #nav {
-    background-color: PowderBlue;
-  }
-  
-  #nav, #footer {
-    padding: 0.5em 0;
-  }
-  
-  #footer {
-    background-color: PowderBlue;
-  }
-  
-  .column1, .column2, .column3 {
-    width: 31.3%;
-    float: left;
-    margin: 1%;
-    background-color: OldLace;
-  }
-              
-  li {
-    display: inline;
-    padding: 0.5em;
-  }
-              
-              
-  #feature, .article {
-    height: 10em;
-    margin-bottom: 1em;
-  }
-  
-  #feature {
-    background-color: NavajoWhite;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/4983/4983385.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-top: 0.5em;
-  }
-  
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'MontserratRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: white
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+#content {
+  overflow: auto;
+}
+            
+#nav, #feature, #footer {
+  margin: 1%;
+}
+
+#nav {
+  background-color: PowderBlue;
+}
+
+#nav, #footer {
+  padding: 0.5em 0;
+}
+
+#footer {
+  background-color: PowderBlue;
+}
+
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+  background-color: OldLace;
+}
+            
+li {
+  display: inline;
+  padding: 0.5em;
+}
+            
+            
+#feature, .article {
+  height: 10em;
+  margin-bottom: 1em;
+}
+
+#feature {
+  background-color: NavajoWhite;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4983/4983385.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 1em;
+}  
