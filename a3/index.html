@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Week 6 - BC - Rhombus">
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+  </head>
 
+  <body>
+    <label>What is the size of Rhombus?</label><br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br>
+    
+    <label>Choose color for Even position</label><br>
+    <select id="colorEven">
+    <option value="#FF1493">Deep Pink</option>
+    <option value="#FF00FF">Fuchsia</option>
+    <option value="#1E90FF">Dodger Blue</option>
+    </select><br>
+
+    <label>Choose color for Odd position</label><br>
+    <select id="colorOdd">
+    <option value="#9ACD32">Yellow Green</option>
+    <option value="#B0E0E6">Powder Blue</option>
+    <option value="#FA8072">Salmon</option>
+    </select>
+    <br>
+    
+    <label>Choose symbol for Rhombus</label>
+    <select id="symbol">
+    <option value="%">%</option>
+    <option value="?">?</option>
+    <option value="&">&</option>
+    </select>
+    <br>
+    
+    <button onclick="createRhombus(document.getElementById('rHeight').value,
+    document.getElementById('colorEven').value,
+    document.getElementById('colorOdd').value,
+    document.getElementById('symbol').value);">Display Rhombus</button>
+    <p> Rhombus </p>
+    <div id="upper"></div>
+    <div id="lower"></div>
+
+
+    <script src="scripts.js"></script>
+
+
+  </body>
+</html>
