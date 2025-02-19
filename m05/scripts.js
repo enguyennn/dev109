@@ -1,5 +1,5 @@
 var table = parseInt(prompt("Enter the unit of the table: ")); // Recieves the unit of table from the user
-if (table == NaN || table == null){ //Setting to the default value of 0 if the input is invalid
+if (isNaN(table)){ //Setting to the default value of 0 if the input is invalid
   table = 0;
 }
 
@@ -7,9 +7,8 @@ var operator = 'multiplication'; // Type of calculation
 var msg = "<h2>Multiplication Table</h2>"; // Message heading
 
 // Do multiplication ten times
-for (i = 1; i <11; i++) {
+for (let i = 1; i <11; i++) {
   msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
-  i++;
 }
 
 // Write the entire times table into the page
