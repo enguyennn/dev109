@@ -16,4 +16,6 @@ function addItem(item) {
     // Insert the new element into its position.
     position.appendChild(newEl);
     
+    // Clear the input field after submission 
+    document.getElementById('item').value = "";
   }
