@@ -3,7 +3,6 @@ function addItem(item) {
     // Create a new element and store it in a variable.
     var newEl = document.createElement('li');
     
-    
     // Create a text node with the item name and store it in a variable.
     var newText = document.createTextNode(item);
     
