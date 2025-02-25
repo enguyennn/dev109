@@ -21,7 +21,7 @@
         <!--Form where the user can input a new grocery item to add to the list-->
         <form onsubmit="return false">
             <input type="text" id="item" name="item" placeholder="Enter here...">
-            <input type="submit" value="Add new grocery item">
+            <input type="submit" value="Add new grocery item" onclick="addItem(document.getElementById('item').value)">
         </form>
     </div>
     <script src="js/scripts.js"></script>
