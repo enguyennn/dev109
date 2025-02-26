@@ -142,3 +142,12 @@ p {
         background-size: 72px 72px;
     }
 }
+
+/*Centers the slack message in the center of the grocery item list */
+#slack {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: auto;
+  }
