@@ -17,9 +17,10 @@ h1 {
 	background-position: center center;
 	text-align: center;
 	text-indent: -1000%;
+	background-size: contain;
 	height: 75px;
 	line-height: 75px;
-	width: auto;
+	width: 117px;
 	margin: 0 auto 0 auto;
 	padding: 30px 10px 20px 10px;}
 
