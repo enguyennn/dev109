@@ -11,6 +11,7 @@ body {
 	margin: 0 auto 0 auto;}
 	/* Responsive page rules at bottom of style sheet */
 
+	/* CSS rules for icon above the words 'buy groceries' */
 h1 {
 	background-image: url(../images/grocery-store.png);
 	background-repeat: no-repeat;
