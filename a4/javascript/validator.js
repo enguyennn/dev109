@@ -65,3 +65,30 @@ function lastName(){
     //5) return the status of each field
     return (validLastname);
 }
+
+Email.addEventListener('blur', email, false)
+function email(){
+    //1) create a variable to control status of each field. Assume that they are not valid
+    var validEmail = false;
+
+    //2) create variables to read the values from html text inputs
+    var userEmail = document.getElementById("Email").value;
+    var errorMessages = "";
+
+    //3) do the validation
+    var atpos = userEmail.indexOf("@");
+    var dotpos = userEmail.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
+        errorMessages +=  "<p>Invalid Email</p>";
+        console.log("Email invalid")
+    } else {
+        validEmail = true;
+        console.log("Email valid")
+    }
+        
+    //4) send error messages 
+    document.getElementById("email").innerHTML = errorMessages;
+
+    //5) return the status of each field
+    return (userEmail);
+}
