@@ -1,6 +1,8 @@
 function isValid() {
     if (firstName() && 
-       lastName()
+       lastName() && 
+       email() &&
+       phoneNumber() &&
     )
     return true
     else
@@ -79,7 +81,7 @@ function email(){
     var atpos = userEmail.indexOf("@");
     var dotpos = userEmail.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
-        errorMessages +=  "<p>Invalid Email</p>";
+        errorMessages +=  "<p>Invalid email</p>";
         console.log("Email invalid")
     } else {
         validEmail = true;
@@ -91,4 +93,29 @@ function email(){
 
     //5) return the status of each field
     return (userEmail);
+}
+
+PhoneNumber.addEventListener('blur', phoneNumber, false)
+function phoneNumber(){
+    //1) create a variable to control status of each field. Assume that they are not valid
+        var validPhoneNumber = false;
+
+    //2) create variables to read the values from html text inputs
+        var phone = document.getElementById("PhoneNumber").value;
+        var errorMessages = "";
+
+    //3) do the validation
+    if (isNaN(phone) || phone.length >15 || phone===null || phone===""){
+        errorMessages += "<p>Invalid phone number</p>";
+        console.log("Invalid phone number")
+    }
+    else
+      validPhoneNumber = true;
+
+      //adding formatting for the validated number with dashes
+      var newPhone = phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2")
+    //4) send error messages 
+    document.getElementById("pnumber").innerHTML = errorMessages;
+
+    //5) return the status of each field
 }
