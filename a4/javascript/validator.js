@@ -1,17 +1,19 @@
 function isValid() {
-    if (firstName() && 
-       lastName() && 
+    if (firstName() &&
+       lastName() &&
        email() &&
-       phoneNumber() && 
-    )
-    return true
-    else
+       phoneNumber() &&
+       usernameCheck()
+    ) {
+        return true;
+    } else {
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
         event.preventDefault();
         return false;
+    }
 }
 
-FirstName.addEventListener('blur', firstName, false);
+document.getElementById("FirstName").addEventListener('blur', firstName, false);
 function firstName(){
     //1) Create variable
     var validFirstname=false;
@@ -39,7 +41,7 @@ function firstName(){
     return (validFirstname);
 };
 
-LastName.addEventListener('blur', lastName, false)
+document.getElementById("LastName").addEventListener('blur', lastName, false)
 function lastName(){
     //1) create a variable to control status of each field. Assume that they are not valid
     var validLastname=false;
@@ -68,7 +70,7 @@ function lastName(){
     return (validLastname);
 }
 
-Email.addEventListener('blur', email, false)
+document.getElementById("Email").addEventListener('blur', email, false)
 function email(){
     //1) create a variable to control status of each field. Assume that they are not valid
     var validEmail = false;
@@ -95,21 +97,20 @@ function email(){
     return (validEmail);
 }
 
-PhoneNumber.addEventListener('blur', phoneNumber, false)
+document.getElementById("PhoneNumber").addEventListener('blur', phoneNumber, false)
 function phoneNumber(){
     //1) create a variable to control status of each field. Assume that they are not valid
-        var validPhoneNumber = false;
+    var validPhoneNumber = false;
 
     //2) create variables to read the values from html text inputs
-        var phone = document.getElementById("PhoneNumber").value;
-        var errorMessages = "";
+    var phone = document.getElementById("PhoneNumber").value;
+    var errorMessages = "";
 
     //3) do the validation
     if (isNaN(phone) || phone.length >15 || phone===null || phone==="" || phone.length < 10){
         errorMessages += "<p>Invalid phone number</p>";
         console.log("Invalid phone number")
-    }
-    else
+    } else { 
         validPhoneNumber = true;
         var newPhone = "";
         if (phone.length === 10){
@@ -121,9 +122,35 @@ function phoneNumber(){
                 return [p1, p2, p3, p4].filter(Boolean).join("-");
             }); 
         }
+        document.getElementById("PhoneNumber").value = newPhone;
+    }
     //4) send error messages 
     document.getElementById("pnumber").innerHTML = errorMessages;
 
     //5) return the status of each field
     return (validPhoneNumber)
+}
+
+document.getElementById("Username").addEventListener('blur', usernameCheck, false)
+function usernameCheck(){
+    //1) create a variable to control status of each field. Assume that they are not valid
+    var validUsername = false;
+
+    //2) create variables to read the values from html text inputs
+    var username = document.getElementById("Username").value;
+    var errorMessages = "";
+
+    //3) do the validation
+    if (username==="null" || username==="" || username.length > 12){
+        errorMessages += "<p>Invalid username</p>";
+        console.log("Username invalid");
+    } else {
+        validUsername = true;
+    }
+
+    //4) send error messages 
+    document.getElementById("username").innerHTML = errorMessages;
+
+    //5) return the status of each field
+    return (validUsername)
 }
