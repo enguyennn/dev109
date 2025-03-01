@@ -3,7 +3,8 @@ function isValid() {
         lastName() && 
         email() && 
         phoneNumber() && 
-        usernameCheck()
+        usernameCheck() &&
+        passwordCheck()
     ) {
         return true;
     } else {
