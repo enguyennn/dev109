@@ -125,7 +125,7 @@ function phoneNumber(){
                 return [p1, p2, p3, p4].filter(Boolean).join("-");
             }); 
         }
-        document.getElementById("PhoneNumber").value = cleanPhone;
+        document.getElementById("PhoneNumber").value = newPhone;
     }
     //4) send error messages 
     document.getElementById("pnumber").innerHTML = errorMessages;
