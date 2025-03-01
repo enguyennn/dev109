@@ -1,9 +1,9 @@
 function isValid() {
-    if (firstName() &&
-       lastName() &&
-       email() &&
-       phoneNumber() &&
-       usernameCheck()
+    if (firstName() && 
+        lastName() && 
+        email() && 
+        phoneNumber() && 
+        usernameCheck()
     ) {
         return true;
     } else {
@@ -153,4 +153,28 @@ function usernameCheck(){
 
     //5) return the status of each field
     return (validUsername)
+}
+
+document.getElementById("Password").addEventListener('blur', passwordCheck, false)
+function passwordCheck(){
+    //1) create a variable to control status of each field. Assume that they are not valid
+    var validPassword = false;
+
+    //2) create variables to read the values from html text inputs
+    var password = document.getElementById("Password").value;
+    var errorMessages = "";
+
+    //3) do the validation
+    if (password.length > 7 || password.match(/[a-z]/)===null || password.match(/[A-Z]/)===null || password.match(/\d/)===null || password.match(/[!@#$%^&*]/)===null){
+        errorMessages += "<p>Invalid password, maximum 7 characters. Requires 1 uppercase, 1 lowercase, 1 number, and 1 special character.</p>";
+        console.log("password invalid");
+    } else {
+        validPassword = true;
+    }
+
+    //4) send error messages 
+    document.getElementById("password").innerHTML = errorMessages;
+
+    //5) return the status of each field
+    return (validPassword)
 }
