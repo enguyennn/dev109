@@ -179,3 +179,31 @@ function passwordCheck(){
     //5) return the status of each field
     return (validPassword)
 }
+
+document.getElementById("Zipcode").addEventListener('blur', zipcode, false)
+function zipcodeCheck(){
+    //1) Initial check to see if country is USA and create a variable to control status of each field. Assume that they are not valid
+    var country = document.getElementById("Country").value
+    var validZipcode = false; 
+    if (country == "USA"){
+        //2) create variables to read the values from html text inputs
+        var zipcode = document.getElementById("Zipcode").value;
+        var errorMessages = "";
+
+        //3) do the validation
+        if (zipcode.length > 5 || zipcode == "null" || zipcode == ""){
+            errorMessages += "<p>Invalid zipcode</p>";
+            console.log("Invalid zipcode");
+        } else {
+            validZipcode = true;
+        }
+
+        //4) send error messages 
+        document.getElementById("zipcode").innerHTML = errorMessages;
+
+        //5) return the status of each field
+        return (validZipcode)
+    } else {
+        return true;
+    }
+}
