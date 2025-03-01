@@ -108,23 +108,24 @@ function phoneNumber(){
     var phone = document.getElementById("PhoneNumber").value;
     var errorMessages = "";
 
-    //3) do the validation
-    if (isNaN(phone) || phone.length >15 || phone===null || phone==="" || phone.length < 10){
+    //3) do the validation, first removing any dashes to ensure proper validation even after formatting
+    var cleanPhone = phone.replace(/-/g, '');
+    if (isNaN(cleanPhone) || cleanPhone.length >15 || cleanPhone==="" || cleanPhone.length < 10){
         errorMessages += "<p>Invalid phone number</p>";
         console.log("Invalid phone number")
     } else { 
         validPhoneNumber = true;
         var newPhone = "";
-        if (phone.length === 10){
+        if (cleanPhone.length === 10){
             //adding formatting for the validated number with dashes, 10 digits
-            newPhone = phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3")
+            newPhone = cleanPhone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3")
         } else {
             // adding formatting for the validated number with dashes, 11-15 digits
-            newPhone = phone.replace(/(\d{3,4})(\d{3,4})(\d{3,4})(\d{0,4})?/, function(_, p1, p2, p3, p4) {
+            newPhone = cleanPhone.replace(/(\d{3,4})(\d{3,4})(\d{3,4})(\d{0,4})?/, function(_, p1, p2, p3, p4) {
                 return [p1, p2, p3, p4].filter(Boolean).join("-");
             }); 
         }
-        document.getElementById("PhoneNumber").value = newPhone;
+        document.getElementById("PhoneNumber").value = cleanPhone;
     }
     //4) send error messages 
     document.getElementById("pnumber").innerHTML = errorMessages;
