@@ -3,8 +3,14 @@
     font-weight: bold;
 }
 
+/* Added a border and background color around the form */
 form {
     border: 1px solid black;
     background-color: Cornsilk;
     padding: 0.5em;
+}
+
+/* Added border around images for clarity */
+img {
+    border: 1px solid black;
 }
