@@ -1,11 +1,19 @@
 function isValid() {
-    if (firstName() && 
-        lastName() && 
-        email() && 
-        phoneNumber() && 
-        usernameCheck() &&
-        passwordCheck() &&
-        zipcodeCheck()
+    var validfname = firstName();
+    var validlname = lastName();
+    var validemail = email();
+    var validpnumber = phoneNumber();
+    var validuser = usernameCheck();
+    var validpassword = passwordCheck();
+    var validzip = zipcodeCheck();
+
+    if (validfname && 
+        validlname && 
+        validemail && 
+        validpnumber && 
+        validuser &&
+        validpassword &&
+        validzip
     ) {
         return true;
     } else {
@@ -56,14 +64,13 @@ function lastName(){
     if (lastname==="null" || lastname==="" || lastname.length > 20 ) {
         errorMessages += "<p>The last name is required and cannot be greater than 20 characters</p>";
         console.log("Last name invalid — length")
-        } else if (lastname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
-            console.log("Last name invalid — bad characters")
-        } else {
-                validLastname = true;
-                console.log("Last name valid")
-        };
-
+    } else if (lastname.match("^[a-zA-Z ,.'-]+$")===null) {
+        errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+        console.log("Last name invalid — bad characters")
+    } else {
+        validLastname = true;
+        console.log("Last name valid")
+    };
 
     //4) send error messages 
     document.getElementById("lname").innerHTML = errorMessages;
