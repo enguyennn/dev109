@@ -12,9 +12,25 @@ for (index = element.length - 1; index >= 0; index--) {
 event.stopPropagation();
   });
   addEventListener("click", function(event) {
+    // Prevents the inputs from having a dot appear on them when clicked 
+    if (event.target.tagName === "SELECT" || event.target.tagName === "INPUT" || event.target.tagName === "BUTTON"){
+      return;
+    }
+
+    var color = document.getElementById("dotColor").value;
+    var size = document.getElementById("dotSize").value;
+
     var dot = document.createElement("div");
     dot.className = "dot";
-    dot.style.left = (event.pageX - 4) + "px";
-    dot.style.top = (event.pageY - 4) + "px";
+
+    // Dynamically sets the color and size based on the user inputs
+    dot.style.backgroundColor = color.toLowerCase();
+    dot.style.width = size + "px";
+    dot.style.height = size + "px";
+
+    // Keeps the dot centered with the new size
+    dot.style.left = (event.pageX - size/2) + "px";
+    dot.style.top = (event.pageY - size/2) + "px";
+    
     document.body.appendChild(dot);
   });
