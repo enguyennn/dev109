@@ -49,7 +49,7 @@ function resetTimer(){
 }
 
 function startTimer(){
-  interval = setInterval(timerAdjustment(), 1000);
+  interval = setInterval(timerAdjustment, 1000);
 }
 
 function timerAdjustment(){
