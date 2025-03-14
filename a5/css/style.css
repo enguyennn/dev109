@@ -1,9 +1,9 @@
-body {
+body { /* Font style and centering for all text */
     font-family: Verdana, Sans-serif;
     text-align: center;
   }
   
-  .timer {
+  .timer { /* Ensuring consistent positioning for the timer */
     position: absolute;
     top: 5%;
     left: 5%;
