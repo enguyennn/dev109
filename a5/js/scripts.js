@@ -1,9 +1,9 @@
 const images = [
-    {src: "images/image1.jpg", description: "Description of Image 1", alt: ""},
+    {src: "images/scorpion.jpg", description: "Scorpion (2018) - Drake ", alt: ""},
     {src: "images/image2.jpg", description: "Description of Image 2", alt: ""},
     {src: "images/image3.jpg", description: "Description of Image 3", alt: ""},
     {src: "images/image4.jpg", description: "Description of Image 4", alt: ""},
-    {src: "images/image5.jpg", description: "Description of Image 5", alt: ""}
+    {src: "images/scorpion.jgp", description: "Description of Image 5", alt: ""}
 ];
 
 let currentIndex = 0;
