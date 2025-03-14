@@ -10,7 +10,7 @@ body { /* Font style and centering for all text */
     font-weight: bold;
   }
   
-  .carousel-container {
+  .carousel-container { /* Ensures correct sizing and positioning for the image carousel */
     position: relative;
     width: 50vw;
     max-width: 90vw;
@@ -18,13 +18,13 @@ body { /* Font style and centering for all text */
     margin: auto;
   }
   
-  img {
+  img { /* Keeps images all the same size, and not too large either */
     width: 60%;
     height: auto;
     padding: 1%;
   }
   
-  button {
+  button { /* Makes the buttons have the same font, larger, and more readable */
     padding: 10px 20px;
     font-family: Verdana, Sans-serif;
     font-weight: bold;
