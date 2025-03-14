@@ -1,0 +1,31 @@
+body {
+    font-family: Verdana, Sans-serif;
+    text-align: center;
+  }
+  
+  .timer {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 70vw;
+    max-width: 90vw;
+    height: auto;
+    margin: auto;
+  }
+  
+  img {
+    width: 60%;
+    height: auto;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-family: Verdana, Sans-serif;
+    font-weight: bold;
+  }
+  
+  
