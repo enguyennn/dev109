@@ -9,14 +9,14 @@ function foundItem(name){
     found++;
     
     if (found === total){
-      document.getElementById('again').style.display = block;
+      document.getElementById('again').style.display = "block";
     }
   }
 }
 
 var bananaArea = document.getElementById("Banana")
 bananaArea.addEventListener("click", function() {
-  foundItem("Banana");
+  foundItem("banana");
 }, false);
 
 var fanArea = document.getElementById("Fan");

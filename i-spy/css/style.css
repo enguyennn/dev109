@@ -1,6 +1,7 @@
 * {  
     font-family: Georgia, serif;
     text-align: center;
+    background-color: beige;
 }
 
 h1 {
@@ -25,12 +26,12 @@ li {
 }
 
 button {
-    cursor: pointer;
     padding: 10px 10px;
     font-size: 20px;
     margin-top: 15px;
 }
 
 #again {
-  display: none;
+    cursor: pointer;
+    display: none;
 }
