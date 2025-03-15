@@ -29,9 +29,9 @@ button {
     padding: 10px 10px;
     font-size: 20px;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 #again {
-    cursor: pointer;
     display: none;
 }
