@@ -7,7 +7,7 @@ const images = [
     {src: "images/nothing-was-the-same.png", description: "Nothing Was The Same (2013) - Drake<br>Nothing Was The Same was Drake's third studio album with 13 tracks, and contains some of my personal favorites.",
         alt: "Album cover; Baby with an afro and comb in hair looking right, background is a blue sky filled with clouds"},
     {src: "images/views.jpg", description: "Views (2016) - Drake<br>Views was Drake's fourth studion album with 20 tracks, and contains some of his most popular hits.", 
-        alt: ""},
+        alt: "Album cover; Seattle Space Needle"},
     {src: "images/scorpion.jpg", description: "Scorpion (2018) - Drake<br>Scorpion was Drake's fifth studio album with 25 tracks.", 
         alt: "Album cover; black and white picture of Drake with his signature"}
 ];
