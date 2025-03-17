@@ -35,7 +35,7 @@ let currentLevel = 0;
 
 function loadLevel(levelIndex) { //Loads in the image and uses the correct list of items to find
   const level = levels[levelIndex];
-  document.getElementById(gameImage).src = imgSrc;
+  document.getElementById("gameImage").src = imgSrc;
 
   const itemList = document.getElementById("items"); // Clearing the previous areas
   itemList.innerHTML = "";
