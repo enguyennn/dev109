@@ -33,7 +33,34 @@ const total = 5;
 let found = 0;
 let currentLevel = 0;
 
-function foundItem(name){
+function loadLevel(levelIndex) { //Loads in the image and uses the correct list of items to find
+  const level = levels[levelIndex];
+  document.getElementById(gameImage).src = imgSrc;
+
+  const itemList = document.getElementById("items"); // Clearing the previous areas
+  itemList.innerHTML = "";
+
+  const map = document.getElementById("gameMap");
+  map.innerHTML = "";
+
+  level.items.forEach(item => {
+    let listItem = document.createElement("li");
+    listItem.id = item.id;
+    listItem.textContent = item.name;
+    itemList.appendChild(listItem); // Add HTML list item to above itemList 
+ 
+    let area = document.createElement("area"); // Assign necessary attributes to the area
+    area.id = item.id;
+    area.href = "#";
+    area.shape = "poly";
+    area.coords = item.coords;
+
+    area.addEventListener("click", () => foundItem(item.id)); // Add event listeners for click, calling the below function
+    map.appendChild(area);
+  });
+}
+
+function foundItem(name){ // Crosses out items on the list and makes the next button appear when the level is completed
   let item = document.getElementById(name);
   if (!item.classList.contains("f")){
     item.classList.add("f");
@@ -41,36 +68,24 @@ function foundItem(name){
     found++;
     
     if (found === total){
-      document.getElementById('again').style.display = "block";
+      document.getElementById('next').style.display = "block";
     }
   }
 }
 
-var bananaArea = document.getElementById("Banana")
-bananaArea.addEventListener("click", function() {
-  foundItem("banana");
-}, false);
+function next(){
+  found = 0; // reset the previous level
+  document.querySelectorAll("li").forEach(item => {
+    item.classList.remove("f");
+    item.style.textDecoration = "none";
+  });
 
-var fanArea = document.getElementById("Fan");
-fanArea.addEventListener("click", function () {
-  foundItem("fan");
-}, false);
+  currentLevel++;
+  currentLevel = currentLevel % levels.length; // Goes to the next level, looping when completed
+  loadLevel(currentLevel);
+  document.getElementById("again").style.display = "none"; // Removes the next button
+}
 
-var dartArea = document.getElementById("Dart");
-dartArea.addEventListener("click", function () {
-  foundItem("dart");
-}, false);
-
-var lionArea = document.getElementById("Lion");
-lionArea.addEventListener("click", function () {
-  foundItem("lion");
-}, false);
-
-var appleArea = document.getElementById("Apple");
-appleArea.addEventListener("click", function () {
-  foundItem("apple");
-}, false);
-
-function replay(){
-  location.reload();
+window.onload = () => {
+  loadLevel(currentLevel);
 }
