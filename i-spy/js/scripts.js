@@ -83,7 +83,7 @@ function next(){
   currentLevel++;
   currentLevel = currentLevel % levels.length; // Goes to the next level, looping when completed
   loadLevel(currentLevel);
-  document.getElementById("again").style.display = "none"; // Removes the next button
+  document.getElementById("next").style.display = "none"; // Removes the next button
 }
 
 window.onload = () => {
